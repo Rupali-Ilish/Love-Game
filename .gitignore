@@ -3,5 +3,6 @@
 /android/
 
 .DS_Store
-Love Game L.zip
-Love Game W/
+
+# Exported game builds
+builds/
