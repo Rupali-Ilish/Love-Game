@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bew0obp8sd7hn"]
+
+[ext_resource type="Script" uid="uid://dtit2xfffy1wa" path="res://love.gd" id="1_txvm7"]
+[ext_resource type="Texture2D" uid="uid://b5anhqr858dlp" path="res://love.png" id="2_pmrq1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gab0d"]
+radius = 20.0
+
+[node name="Love" type="Area2D" unique_id=1957106367]
+script = ExtResource("1_txvm7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=726470164]
+shape = SubResource("CircleShape2D_gab0d")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=522445770]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_pmrq1")

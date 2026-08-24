@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://dnv4w7foopox3"]
+
+[ext_resource type="Script" uid="uid://ribmcb3gmhs" path="res://hud.gd" id="1_37p78"]
+
+[node name="HUD" type="CanvasLayer" unique_id=954999898]
+script = ExtResource("1_37p78")
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1991511281]
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 81.0
+offset_bottom = 33.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 30
+text = "Score: 0"
+
+[node name="LivesLabel" type="Label" parent="." unique_id=2131825709]
+offset_left = 980.0
+offset_top = 10.0
+offset_right = 1037.0
+offset_bottom = 33.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 30
+text = "Lives: 3"
+
+[node name="GameOverPanel" type="Panel" parent="." unique_id=1065363804]
+visible = false
+offset_left = 226.0
+offset_top = 199.0
+offset_right = 926.0
+offset_bottom = 449.0
+
+[node name="Label" type="Label" parent="GameOverPanel" unique_id=425794834]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 670.0
+offset_bottom = 180.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 32
+text = "Game Over!!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="RestartButton" type="Button" parent="GameOverPanel" unique_id=1216365215]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 180.0
+offset_right = 390.0
+offset_bottom = 220.0
+text = "Restart"
+
+[node name="StartPanel" type="Panel" parent="." unique_id=1794123347]
+offset_left = 226.0
+offset_top = 174.0
+offset_right = 926.0
+offset_bottom = 474.0
+
+[node name="Label" type="Label" parent="StartPanel" unique_id=535682336]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 60.0
+offset_right = 556.0
+offset_bottom = 179.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 42
+text = "Show Me how much
+      you Love me!"
+
+[node name="StartButton" type="Button" parent="StartPanel" unique_id=1384145129]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 200.0
+offset_right = 430.0
+offset_bottom = 250.0
+text = "I will ❤"
+
+[connection signal="pressed" from="GameOverPanel/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="StartPanel/StartButton" to="." method="_on_start_button_pressed"]

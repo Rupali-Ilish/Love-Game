@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://3u8xvmcvjk1u"]
+
+[ext_resource type="PackedScene" uid="uid://dnh0qb0pr07xb" path="res://player.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://ct8gx6a6qpggt" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dnv4w7foopox3" path="res://hud.tscn" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://lurgrngsksb0" path="res://bg.png" id="4_1bvp3"]
+
+[node name="Main" type="Node2D" unique_id=971494814]
+script = ExtResource("1_h2yge")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=241828348]
+position = Vector2(568, 324)
+scale = Vector2(3.29, 2.6)
+texture = ExtResource("4_1bvp3")
+
+[node name="HUD" parent="." unique_id=954999898 instance=ExtResource("2_h2yge")]
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=1424043222]
+wait_time = 1.2
+autostart = true
+
+[node name="Player" parent="." unique_id=1000044425 instance=ExtResource("1_0xm2m")]
+position = Vector2(576, 590)
